@@ -16,7 +16,7 @@ public class Apply_forces : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.Q))
         {
             ourRigidbody.AddForce(1 * Vector3.left);
         }
