@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class T95Movement : MonoBehaviour
 {
+    
     private float turningspeed = 50;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,20 +16,16 @@ public class T95Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W))
 
-            transform.position += Vector3.up * Time.deltaTime;
-        if (Input.GetKey(KeyCode.DownArrow))
+            transform.position += transform.forward * 4 * Time.deltaTime;
+        if (Input.GetKey(KeyCode.S))
 
-            transform.position += Vector3.down * Time.deltaTime;
-        if (Input.GetKey(KeyCode.LeftArrow))
+            transform.position += -transform.forward* 4 * Time.deltaTime;
 
-            transform.position += Vector3.left * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.RightArrow))
-            transform.position += Vector3.right * Time.deltaTime;
-
-        if (Input.GetKey(KeyCode.A))
+      if (true)
+        { if (Input.GetKey(KeyCode.A))
 
             transform.Rotate(Vector3.up, -turningspeed * Time.deltaTime);
 
@@ -35,7 +33,12 @@ public class T95Movement : MonoBehaviour
 
             transform.Rotate(Vector3.down, -turningspeed * Time.deltaTime);
 
+            {
+        
 
+              
+            }
+        }
     }
 
 }
