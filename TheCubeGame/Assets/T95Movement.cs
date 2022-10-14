@@ -5,7 +5,7 @@ using UnityEngine;
 public class T95Movement : MonoBehaviour
 {
     
-    private float turningspeed = 50;
+    private float turningspeed = 30;
     
     // Start is called before the first frame update
     void Start()
