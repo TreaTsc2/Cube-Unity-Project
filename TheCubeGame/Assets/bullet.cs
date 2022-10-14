@@ -2,13 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GenerateObject : MonoBehaviour
+public class bullet : MonoBehaviour
 {
-   
-   
-
-
-    public Transform cubeTemplate;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +13,6 @@ public class GenerateObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.B))
-        {
-            Instantiate(cubeTemplate);
-
-        }
+        
     }
 }

@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
 {
 
      int CHP;
-     public int MHP = 100;
+     public int MHP = 1000;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +18,8 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(Input.GetKeyDown("h")) 
-            takeDamage(12);
+       if(Input.GetKeyDown("r")) 
+            takeDamage(1000);
     }
 
    internal void takeDamage(int damage)
