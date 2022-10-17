@@ -6,7 +6,7 @@ public class Barrel : MonoBehaviour
 {
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
-    public float bulletSpeed = 90;
+    public float bulletSpeed = 10000000000000;
 
 
 
@@ -25,7 +25,7 @@ public class Barrel : MonoBehaviour
 
 
             var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-            bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+            bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.up * bulletSpeed;
         }
     }
 }
