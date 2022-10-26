@@ -6,8 +6,9 @@ public class Barrel : MonoBehaviour
 {
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
-    public float bulletSpeed = 10000000000000;
-
+    public float bulletSpeed = 250;
+    public float cooldownTime = 5;
+    private float nextFireTime = 60;
 
 
 
@@ -19,7 +20,15 @@ public class Barrel : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {  if(Time.time > nextFireTime)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+
+            {
+                print("Shot fired, cooldown started");
+                nextFireTime = Time.time + cooldownTime;
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
 
